@@ -36,9 +36,7 @@ def save_search_history(history):
 search_history = load_search_history()
 
 # Endpoint for counting word frequency
-
-# count_word_freq
-@app.route('/', methods=['GET'])
+@app.route('/count_word_freq', methods=['GET'])
 def word_frequency_analysis():
     # Get the topic from the request parameters
     topic = request.args.get('topic')
