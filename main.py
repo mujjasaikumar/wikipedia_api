@@ -53,11 +53,11 @@ def word_frequency_analysis():
     top_n_words = dict(word_freq.most_common(n))  # Convert to dictionary
 
     # Update search history with the current analysis
-    search_history.append({"topic": topic, "top_words": top_n_words})
+    search_history.append({"topic": topic_name, "top_words": top_n_words})
     save_search_history(search_history)
 
     # Format response with indentation for better readability
-    response = {"topic": topic, "top_words": top_n_words}
+    response = {"topic": topic_name, "top_words": top_n_words}
     return jsonify(json.loads(json.dumps(response, indent=2)))  # Use json.dumps for indentation
 
 
